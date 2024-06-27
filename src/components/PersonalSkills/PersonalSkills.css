@@ -1,0 +1,58 @@
+.personal-skills-div{
+    width: 100%;
+}
+
+.personal-skills-div h2{
+    font-size: 1.6rem;
+    margin: 0;
+    margin-top: 2rem;
+}
+.personal-skills-list{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+}
+.personal-skills-item{
+    flex: 0 0 auto;
+    border: 2px solid white;
+    border-radius: 0.2em;
+    height: fit-content;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    padding-bottom: 0.2rem;
+    padding-right: 1rem;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.personal-skills-item p{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+#personal-skill-0{
+    border: 3px solid #098366;
+}
+
+#personal-skill-1{
+    background-color:  #098366;
+    border: 3px solid #098366;
+}
+
+#personal-skill-2{
+    background-color:  #E2FF0F;
+    border: 3px solid #E2FF0F;
+    color: #171717;
+}
+
+#personal-skill-3{
+    border: 3px solid #E2FF0F;
+}
+
+#personal-skill-4{
+    border: 3px solid #ffffff;
+}
+

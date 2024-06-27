@@ -1,0 +1,199 @@
+
+
+.data-project-detail{
+  width: 20rem;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 6;
+  left: 3rem;
+  top: 8.5rem;
+}
+.back-icon{
+  width: 14%;
+}
+
+.behance-icon{
+  display: flex;
+  position: relative;
+  width: 6%;
+  margin-left: 19rem;
+  margin-top: 1.6rem;
+}
+
+
+.data-project-detail h1{
+  color: #D8EC0A;;
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+.data-project-detail p{
+  font-size: 0.7rem;
+}
+
+
+.container {
+  width: 100%;
+  height: 45rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.container img {
+  width: 100%; /* La imagen ocupará todo el ancho disponible en la celda del grid */
+  height: 100%; /* La imagen ocupará todo el espacio vertical disponible en la celda del grid */
+  object-fit: cover; /* La imagen se ajustará para cubrir completamente el contenedor sin deformarse */
+}
+
+.container div {
+  border-radius: 0.3rem;
+}
+
+
+.item-0{
+  background-color: black;
+  grid-row: 1 / 3;
+  grid-column: 1 / 10;
+  opacity: 0.7;
+  z-index: 5;
+}
+
+
+.item-1{
+  grid-row: 1 / 3;
+  grid-column: 1 / 10;
+}
+
+.item-2 {
+  border: white 3px solid;
+  grid-row: 3 / 4;
+  grid-column: 1 / 5;
+}
+
+.item-3 {
+  grid-row: 3 / 4;
+  grid-column: 5 / 10;
+}
+
+.item-4 {
+  border: white 3px solid;
+  grid-row: 4 / 7;
+  grid-column: 1 / 6;
+}
+
+.item-5 {
+  background-color: #D8EC0A;
+  grid-row: 4 / 5;
+  grid-column: 6 / 10;
+  color: black;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.item-5 h2{
+  margin: 0;
+}
+
+
+@media (min-width: 700px){
+  .container {
+    width: 100%;
+    height: 34rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1rem;
+  }
+
+  .data-project-detail{
+    width: 38rem;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    left: 22rem;
+    top: 8rem;
+  }
+
+  .data-project-detail h1{
+    color: #D8EC0A;;
+    font-size: 4rem;
+    margin: 0;
+  }
+  .behance-icon{
+    display: flex;
+    position: absolute;
+    left: 36rem;
+    top: 15rem;
+    margin: 0;
+  }
+
+  .back-icon{
+    width: 10%;
+    margin-bottom: 1.5rem;
+
+  }
+  
+  .data-project-detail p{
+    font-size: 1.1rem;
+  }
+  
+
+  .container img {
+    width: 100%; /* La imagen ocupará todo el ancho disponible en la celda del grid */
+    height: 100%; /* La imagen ocupará todo el espacio vertical disponible en la celda del grid */
+    object-fit: cover; /* La imagen se ajustará para cubrir completamente el contenedor sin deformarse */
+    border-radius: 0.6rem;
+  }
+
+  .container div {
+    border-radius: 0.6rem;
+  }
+  
+  .item-0{
+    background-color: black;
+    grid-row: 1 / 8;
+    grid-column: 1 / 8;
+    opacity: 0.7;
+    z-index: 5;
+  }
+
+
+  .item-1{
+    grid-row: 1 / 8;
+    grid-column: 1 / 8;
+  }
+
+  .item-2 {
+    border: white 3px solid;
+    grid-row: 8 / 13;
+    grid-column: 1 / 4;
+  }
+
+  .item-3 {
+    grid-row: 8 / 13;
+    grid-column: 4 / 8;
+  }
+
+  .item-4 {
+    border: white 3px solid;
+    grid-row: 1 / 10;
+    grid-column: 8 / 11;
+  }
+
+  .item-5 {
+    background-color: #D8EC0A;
+    grid-row: 10 / 13;
+    grid-column: 8 / 11;
+    color: black;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  }

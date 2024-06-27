@@ -1,0 +1,19 @@
+.Toastify__toast--success {
+    background-color: #0B997C !important; /* Cambia el color de fondo para mensajes de éxito */
+    color: #fff !important; /* Cambia el color del texto para mensajes de éxito */
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f43649 !important; /* Cambia el color de fondo para mensajes de error */
+    color: #fff !important; /* Cambia el color del texto para mensajes de error */
+  }
+  
+  .Toastify__toast--info {
+    background-color: #444444 !important; /* Cambia el color de fondo para mensajes de información */
+    color: #fff !important; /* Cambia el color del texto para mensajes de información */
+  }
+  
+  .Toastify__toast--warning {
+    background-color: #D9D9D9 !important; /* Cambia el color de fondo para mensajes de advertencia */
+    color: black !important; /* Cambia el color del texto para mensajes de advertencia */
+  }

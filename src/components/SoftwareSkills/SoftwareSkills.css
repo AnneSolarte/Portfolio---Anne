@@ -1,0 +1,111 @@
+.softaware-skills-div{
+    position: relative;
+    height: 19rem;
+    color: #D9D9D9;
+    background-color: #171717;
+    border-radius: 0.1em;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.645) 0px 3px 8px;
+    padding-left:2rem;
+    padding-top: 3rem;
+    z-index: 1;
+    margin-bottom: 4rem;
+}
+
+.softaware-skills-div hr{
+    width: 100%;
+    margin-left: -1rem;
+    border: none; /* Elimina el borde predeterminado */
+    background-color:#D9D9D9; /* Cambia el color de fondo a tu preferencia */
+    height: 1px; /* Establece la altura de la línea */
+    margin-bottom: 1rem;
+}
+
+
+.white-line {
+    width: 90%; /* Ancho del rectángulo (mitad del contenedor) */
+    height: 90%; /* Altura del rectángulo (mitad del contenedor) */
+    border: 1px solid white; /* Borde blanco */
+    position: absolute; /* Posiciona el rectángulo dentro del contenedor */
+    top: 50%; /* Alinea el rectángulo en el centro vertical */
+    left: 50%; /* Alinea el rectángulo en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el rectángulo */
+}
+
+.software-list{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.software-item{
+    flex: 0 0 auto;
+    max-width: 4rem;
+    height: fit-content;
+    margin-right: 0.5rem;
+
+}
+
+.software-item img{
+    width: 3rem;
+
+}
+
+@media (min-width: 700px){
+    
+    .softaware-skills-div{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        width: 28rem;
+        height: 8rem;
+        left: 38rem;
+        padding: 2rem;
+    }
+
+    .softaware-skills-div h3{
+       font-size: 1rem;
+       font-weight: 400;
+    }
+
+    #title-software-skills{
+        margin-bottom: 0;
+     }
+
+    .white-line {
+        width: 95%; /* Ancho del rectángulo (mitad del contenedor) */
+        height: 85%; /* Altura del rectángulo (mitad del contenedor) */
+        border: 0.2px solid white;;
+    }
+
+    .software-item img{
+        width: 2.2rem;
+    
+    }
+
+    .software-list{
+        margin-bottom: 1.5rem;
+        margin-top: 0.5rem;
+        margin-right: 2rem;
+    }
+
+    .softaware-skills-div hr {
+        width: 1px; /* Ancho de la línea vertical */
+        height: 10.1rem; /* Altura de la línea vertical */
+        margin-left: -1rem;
+        border: none; /* Elimina el borde predeterminado */
+        background-color: #D9D9D9; /* Cambia el color de fondo a tu preferencia */
+        transform: rotate(180deg); /* Rota la línea para que sea vertical */
+        margin-bottom: 1rem;
+        margin-top: -10.6rem;
+        margin-left: 14rem;
+    }
+    
+    
+  }
+
+

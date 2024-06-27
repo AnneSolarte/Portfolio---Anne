@@ -1,0 +1,16 @@
+.management-panel-page-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#title{
+    display:flex;
+    margin: 0;
+}
+
+.management-panel-page-div p{
+    color: black;
+}
+
+

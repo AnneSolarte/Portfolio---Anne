@@ -1,0 +1,191 @@
+.identification-card-div{
+    width: 20;
+    height: 12rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5em;
+    position: relative;
+    z-index: 3;
+}
+.info-card-div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 8rem;
+    z-index: 4;
+    margin-top: 0.5rem;
+}
+
+.identification-card-div h3{
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 0.8rem;
+}
+
+.identification-card-div img{
+    width: 100%;
+    
+}
+
+.img-character-div{
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    margin-right: 0.8rem;
+    margin-left: 0.5rem;
+    margin-top: 1.1rem;
+}
+
+.data-identification-div{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 1.2rem;
+}
+
+.data-identification-div p{
+    display: flex;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.bold-text{
+    font-weight: 700;
+}
+
+.social-networks-div-desktop{
+    display: none;
+}
+
+
+.social-networks-div-mobile{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    z-index: 4;
+    margin-top: 1.5rem;
+    
+}
+
+.social-networks-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.social-networks-item img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.social-networks-item p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.mobile-card-img{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 0rem;
+}
+
+.desktop-card-img{
+    display: none;
+    
+}
+
+#code-img{
+    display: flex;
+    width: 4.5rem;
+    position: absolute;
+    top: 4rem;
+    left: 15rem;
+}
+
+
+@media (min-width: 700px){
+    .mobile-card-img{
+        display: none;
+    }
+    
+    .desktop-card-img{
+        width: 50%;
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        
+    }
+
+    .info-div{
+        width: 14rem;
+    }
+
+    .info-card-div{
+        height: 12rem;
+        margin-top: 1.2rem;
+    }
+
+    .identification-card-div{
+        width: 29rem;
+        height: 13rem;
+        background-color: rgb(24, 214, 189);
+        z-index: 3;
+    }
+
+    .img-character-div{
+        width: 11rem;
+        height: 11rem;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    #code-img{
+        display: flex;
+        width: 5.2rem;
+        position: absolute;
+        top: 7.5rem;
+        left: 23rem;
+    }
+
+    
+    .social-networks-div-desktop{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .social-networks-div-mobile{
+        display: none;
+    }
+    .social-networks-item{
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        align-items: center;
+    }
+
+    .social-networks-item p{
+        font-size: 0.8rem;
+        margin-left: 0.2rem;
+    }
+
+    .data-identification-div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.2rem;
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .data-identification-item p{
+       font-size: 0.9rem;
+    }
+  }
