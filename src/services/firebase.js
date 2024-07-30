@@ -55,6 +55,6 @@ export const uploadImage = async (image, project) => {
     return imageURL
   } catch (e) {
     console.error('Error uploading image: ', e)
-    throw e // Re-lanzar el error para que pueda ser manejado por el código que llama a esta función
+    throw e
   }
 }

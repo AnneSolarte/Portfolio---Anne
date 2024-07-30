@@ -3,15 +3,22 @@ import { Context } from './context'
 import PropTypes from 'prop-types'
 import { getProjects } from '../services/firebase'
 import { toast } from 'react-toastify'
+const userState = localStorage.getItem('user')
 
 export const ContextProvider = ({ children }) => {
-  const userState = localStorage.getItem('user')
   const [userIsLogged, setuserIsLogged] = useState(userState || false)
   const [hiddenBar, setHiddenBar] = useState(false)
   const [formData, setFormData] = useState({})
   const [selectedFilter, setSelectedFilter] = useState('all')
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const storedUserState = localStorage.getItem('user')
+    if (storedUserState !== null) {
+      setuserIsLogged(storedUserState === 'true')
+    }
+  }, [])
 
   const logInUser = () => {
     setuserIsLogged(true)

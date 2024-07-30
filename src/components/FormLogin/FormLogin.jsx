@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
 export const FormLogin = ({ dataForm, submitImg }) => {
-  const { formData, setFormData, logInUser } = useContextHook()
+  const { formData, setFormData, logInUser, userIsLogged } = useContextHook()
   const navigate = useNavigate()
 
   const onSubmmit = async (e) => {
@@ -32,6 +32,8 @@ export const FormLogin = ({ dataForm, submitImg }) => {
         theme: 'colored'
       })
     }
+
+    console.log('userlogged', userIsLogged)
   }
 
   const onChangeText = (e) => {
