@@ -158,35 +158,44 @@ export const FormAddProject = ({ submitText, dataForm }) => {
           </div>
 
           <div className='section-form2'>
-            <div className='inputs-image-div'>
-              {dataForm.map((field, index) => (
-                field.type === 'image'
-                  ? (
-                    <div
-                      className='container-input'
-                      key={index}
-                    >
-                      <input
-                        type='file'
-                        name={field.name}
-                        id={`file-${index}`}
-                        className='inputfile inputfile-5'
-                        onChange={onFileChange}
-                      />
-                      <label htmlFor={`file-${index}`}>
-                        <figure>
-                          <img src={imgIcon} alt='icon' />
-                        </figure>
-                        <span className='iborrainputfile'>
-                          {selectedFiles[field.name] || `Seleccionar ${field.name}`}
-                        </span>
-                      </label>
-                    </div>
-                    )
-                  : null
-              ))}
+            <div className='inputs-image'>
+              <p>Select the images with these portions</p>
+              <div className='inputs-image-div'>
+                {dataForm.map((field, index) => (
+                  field.type === 'image'
+                    ? (
+                      <div
+                        className='container-input'
+                        id={`file-${field.name}`}
+                        key={index}
+                      >
+                        <input
+                          type='file'
+                          name={field.name}
+                          id={`file-${index}`}
+                          className='inputfile'
+                          onChange={onFileChange}
+                        />
+                        <label htmlFor={`file-${index}`}>
+                          <figure>
+                            <img
+                              src={imgIcon}
+                              alt='icon'
+                              className='icon-img'
+                            />
+                          </figure>
+                          <span className='iborrainputfile'>
+                            {selectedFiles[field.name] || `Seleccionar ${field.name}`}
+                          </span>
+                        </label>
+                      </div>
+                      )
+                    : null
+                ))}
 
+              </div>
             </div>
+
             <input
               className='submit-input-add-project'
               type='submit'

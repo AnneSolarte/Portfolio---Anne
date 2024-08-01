@@ -7,7 +7,7 @@ import prIcon from '../assets/pr-icon.png'
 import figmaIcon from '../assets/figma-icon.png'
 import jsIcon from '../assets/js-icon.png'
 import tsIcon from '../assets/ts-icon.png'
-import reactIcon from '../assets/react-icon.png'
+import reactIcon from '../assets/react-icom.png'
 
 export const dataIdentification = [
   {
@@ -19,7 +19,7 @@ export const dataIdentification = [
   {
     id: '2',
     key: 'Age',
-    value: '19 y/o'
+    value: '20 y/o'
   },
   {
     id: '3',
@@ -65,6 +65,24 @@ export const education = [
     date: '2021 - Present',
     place: 'Icesi University, Cali Colombia'
 
+  },
+  {
+    id: '2',
+    major: 'Leader UI design- Integrating project 1',
+    date: '2023',
+    place: 'Icesi University, Cali Colombia'
+  },
+  {
+    id: '3',
+    major: 'Designing with algorithms Monitor',
+    date: '2024',
+    place: 'Icesi University, Cali Colombia'
+  },
+  {
+    id: '4',
+    major: 'Web Programming Monitor',
+    date: '2024',
+    place: 'Icesi University, Cali Colombia'
   }
 ]
 

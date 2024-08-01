@@ -1,5 +1,5 @@
 import iconHome from '../assets/iconHome.png'
-import iconAbout from '../assets/iconAbout.png'
+import iconAbout from '../assets/iconDoc.png'
 import iconProjects from '../assets/iconProjects.png'
 import iconContact from '../assets/iconContact.png'
 import iconLogin from '../assets/iconLogin.png'

@@ -63,7 +63,7 @@
         position: absolute;
         width: 28rem;
         height: 8rem;
-        left: 38rem;
+        left: 48%;
         padding: 2rem;
     }
 
@@ -84,6 +84,9 @@
 
     .software-item img{
         width: 2.2rem;
+        height: 2.2rem;
+        margin: 0;
+        padding: 0;
     
     }
 
@@ -91,6 +94,8 @@
         margin-bottom: 1.5rem;
         margin-top: 0.5rem;
         margin-right: 2rem;
+        align-items: center;
+        justify-content: center;
     }
 
     .softaware-skills-div hr {
