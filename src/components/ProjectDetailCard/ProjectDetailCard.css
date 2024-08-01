@@ -100,6 +100,15 @@
 
 
 @media (min-width: 700px){
+  .icons{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 1rem;
+  }
+
   .container {
     width: 100%;
     height: 34rem;
@@ -110,13 +119,12 @@
   }
 
   .data-project-detail{
-    width: 38rem;
+    width: 44%;
     display:flex;
     flex-direction: column;
-    position: absolute;
     z-index: 6;
-    left: 22rem;
-    top: 8rem;
+    margin-left: 19%;
+    margin-top: 1%;
   }
 
   .data-project-detail h1{
@@ -126,28 +134,30 @@
   }
   .behance-icon{
     display: flex;
-    position: absolute;
-    left: 36rem;
-    top: 15rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: 0;
   }
 
   .back-icon{
-    width: 10%;
-    margin-bottom: 1.5rem;
-
+    width: 4rem;
+    height: 4rem;
   }
   
   .data-project-detail p{
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-  
 
   .container img {
     width: 100%; /* La imagen ocupará todo el ancho disponible en la celda del grid */
     height: 100%; /* La imagen ocupará todo el espacio vertical disponible en la celda del grid */
     object-fit: cover; /* La imagen se ajustará para cubrir completamente el contenedor sin deformarse */
     border-radius: 0.6rem;
+  }
+
+  .item-5 h2{
+    margin: 0;
+    font-size: 2rem;
   }
 
   .container div {
@@ -158,7 +168,7 @@
     background-color: black;
     grid-row: 1 / 8;
     grid-column: 1 / 8;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 5;
   }
 

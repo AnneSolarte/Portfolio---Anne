@@ -13,4 +13,11 @@
     color: black;
 }
 
+@media (min-width: 700px){
+    .management-panel-page-div{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
 

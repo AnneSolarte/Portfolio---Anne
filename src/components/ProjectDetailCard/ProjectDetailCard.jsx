@@ -16,21 +16,24 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
     <div className='project-detail-card-div'>
 
       <div className='data-project-detail'>
-        <img
-          src={backIcon}
-          onClick={HandleGoBackPage}
-          className='back-icon'
-        />
+        <div className='icons'>
+          <img
+            src={backIcon}
+            onClick={HandleGoBackPage}
+            className='back-icon'
+          />
+          <a
+            href={behanceLink}
+          >
+            <img
+              src={behanceIcon}
+              className='behance-icon'
+            />
+          </a>
+        </div>
+
         <h1>{title} </h1>
         <p>{description} </p>
-        <a
-          href={behanceLink}
-        >
-          <img
-            src={behanceIcon}
-            className='behance-icon'
-          />
-        </a>
 
       </div>
       <div className='container'>

@@ -8,12 +8,15 @@ import { Contact } from '../pages/Contact/Contact'
 import { ManagementPanel } from '../pages/ManagementPanel/ManagementPanel'
 import { Login } from '../pages/Login/Login'
 import { PrivateRoute } from '../pages/PrivateRoute'
+import { NavBar } from '../components/NavBar/NavBar'
 
 export const Router = () => {
   return (
     <BrowserRouter>
 
       <Header />
+
+      <NavBar />
 
       <section className='page-div'>
         <Routes>

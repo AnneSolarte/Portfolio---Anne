@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+    align-items: center; 
+    justify-content: space-around;
     
 }
 
@@ -11,10 +13,13 @@
     
 }
 .filter-label.selected {
+  display: flex;
+  justify-content: flex-start;
     font-weight: bold;
     background-color: #E2FE0B;
-    padding: 0.2rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     border-radius: 0.4rem;
     color: black;
   }
@@ -25,20 +30,15 @@
     -moz-appearance: none;
     width: 0;
     height: 0;
-/
-    &:checked {
-      background-color: #E2FE0B;
-    }
+    padding: 0;
+    margin: 0;
+}
   
-    &:hover {
-      border-color: #a7d230;
-    }
+.filter-label:hover {
+  color: #E2FE0B;
+}
   
-    /* Estilos de foco */
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-    }
-  }
+
 
 
 @media (min-width: 700px){
@@ -46,14 +46,10 @@
         font-size: 1.5rem;
         font-weight: 200;
         margin-right: 2rem;
-        margin-top: 1rem;
-        
         
     }
     .filters-section{
-        margin-left: 2rem;
-        margin-top: 0;
-        
+        margin-left: 5rem;
         
     }
 

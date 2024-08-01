@@ -6,7 +6,7 @@
 
 .page-div{
   display: flex;
-  width: 90%;
+  width: 86%;
   height: auto;
   margin-left: 1.8rem;
   margin-right: 1.8rem;
@@ -17,7 +17,7 @@
 @media (min-width: 700px){
   .page-div{
     width: 70%;
-    height: 40em;
+    height: auto;
     margin-top: 9%;
     margin-left: 20%;
   }

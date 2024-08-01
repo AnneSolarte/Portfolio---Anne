@@ -49,7 +49,7 @@
     .projects-list-div{
         flex-wrap: wrap;
         flex-direction: row;
-        margin-top: 1rem;
+        margin-top: 2rem;
 
     }
     .project-image-div{

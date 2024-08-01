@@ -39,6 +39,7 @@
         width: 100%;
         flex-direction:row ;
         align-self: center;
+        margin-top: 7%;
     }
     
     .contact-card{
