@@ -3,10 +3,13 @@ import backIcon from '../../assets/back-icon.png'
 import behanceIcon from '../../assets/behance-icon.png'
 import PropTypes from 'prop-types'
 import './ProjectDetailCard.css'
+import { useNavigate } from 'react-router-dom'
 
 export const ProjectDetailCard = ({ title, description, behanceLink, image1, image2, image3, image4, OnClick, project, categories }) => {
+  const navigate = useNavigate()
+
   const HandleGoBackPage = () => {
-    OnClick()
+    navigate('/projects')
   }
 
   return (

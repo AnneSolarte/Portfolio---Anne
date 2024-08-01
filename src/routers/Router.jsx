@@ -15,7 +15,7 @@ export const Router = () => {
 
       <Header />
 
-      <section className='content'>
+      <section className='page-div'>
         <Routes>
           <Route path='/' element={<Navigate to='/home' />} />
           <Route path='/home' element={<Home />} />

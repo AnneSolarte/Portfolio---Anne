@@ -1,11 +1,6 @@
-.form-contact-card{
-    display:flex;
-    width: 100%;
 
-}
 
 .form-contact-div{
-    width: 19.5rem;
     padding: 1rem;
     display:flex;
     flex-direction: column;
@@ -16,6 +11,7 @@
 }
 
 .form-contact-div input{
+    width: auto;
     border: 2px solid white;
     background-color: transparent;
     margin-bottom: 0.5rem;
@@ -43,13 +39,24 @@
     padding-bottom: 4rem;
 }
 
+
 @media (min-width: 700px){
-    
+
    .form-contact-div{
-    width: 22rem;
-   margin-top: 0;
-   padding-top: 2rem;
-   height: 16rem;
+    display: flex;
+    width: auto;
+        margin-top: 0;
+        padding-top: 2rem;
+        height: 16rem;
+   }
+   
+   .form-contact-card{
+    display: flex;
+    width: 100%;
+   }
+
+   form {
+    width: 100%;
    }
     
   }

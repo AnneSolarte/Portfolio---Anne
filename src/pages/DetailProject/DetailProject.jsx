@@ -17,8 +17,7 @@ export const DetailProject = () => {
   }
 
   return (
-    <div className='page-div'>
-
+    <>
       {projectData
         ? (
           <ProjectDetailCard
@@ -37,6 +36,7 @@ export const DetailProject = () => {
         : (
           <div>Project not found</div>
           )}
-    </div>
+    </>
+
   )
 }
