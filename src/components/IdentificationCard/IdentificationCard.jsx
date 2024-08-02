@@ -54,7 +54,10 @@ export const IdentificationCard = () => {
                 key={index}
                 className='social-networks-item'
               >
-                <img src={network.icon} />
+                <a href={network.link}>
+                  <img src={network.icon} />
+                </a>
+
                 <p>{network.value}</p>
               </div>
             ))}

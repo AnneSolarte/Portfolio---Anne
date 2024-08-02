@@ -1,5 +1,5 @@
-import behanceIcon from '../assets/behance-icon2.png'
-import instagramIcon from '../assets/instagram-icon.png'
+import behanceIcon from '../assets/behance-icom2.png'
+import linkedinIcon from '../assets/linkedin-icom.png'
 import aeIcon from '../assets/ae-icon.png'
 import aiIcon from '../assets/ai-icon.png'
 import psIcon from '../assets/ps-icon.png'
@@ -33,13 +33,15 @@ export const socialNetworks = [
   {
     id: '1',
     icon: behanceIcon,
-    value: 'AnneSolarte'
+    link: 'https://www.behance.net/annesolarte1',
+    value: 'Anne Solarte'
 
   },
   {
     id: '2',
-    icon: instagramIcon,
-    value: 'Anne_de_larregui98'
+    icon: linkedinIcon,
+    link: 'https://www.linkedin.com/in/anne-solarte-461a961b3/',
+    value: 'Anne Solarte'
   }
 ]
 
@@ -47,7 +49,7 @@ export const personalSkills = [
   'Adaptability',
   'Creativity',
   'Critical Thinking',
-  'Hobbies',
+  'Leadership',
   'TeamWork'
 ]
 
