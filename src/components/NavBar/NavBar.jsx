@@ -10,7 +10,7 @@ export const NavBar = () => {
   const { userIsLogged, changeNavBar, logOutUser, hiddenBar } = useContextHook()
   const navigate = useNavigate()
 
-  console.log('user in nav', userIsLogged)
+  console.log('bar', hiddenBar)
 
   const onChangeNavBar = (type) => {
     changeNavBar(type)
@@ -62,7 +62,12 @@ export const NavBar = () => {
           : (
             <ul>
               <li id='li-close-nav'>
-                <img className='icon-nav-img' id='icon-close-bar' src={iconCloseBar} />
+                <img
+                  className='icon-nav-img'
+                  id='icon-close-bar'
+                  src={iconCloseBar}
+                  onClick={() => onChangeNavBar('hidden')}
+                />
               </li>
               <li>
                 <img

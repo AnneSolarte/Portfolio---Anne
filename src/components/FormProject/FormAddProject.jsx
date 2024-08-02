@@ -34,7 +34,7 @@ export const FormAddProject = ({ submitText, dataForm }) => {
         name: data.title.value.toLowerCase().replace(/\s+/g, ''),
         description: data.description.value,
         project: data.project.value,
-        behanceLink: data.project.value,
+        behanceLink: data.behanceLink.value,
         images: urlImages,
         categories: {
           uxdesign: data.uxdesign.checked,

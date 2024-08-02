@@ -45,19 +45,19 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
         </div>
 
         <div className='item-2'>
-          <img src={image2} className='img-2' />
+          <img src={image3} className='img-2' />
         </div>
 
         <div className='item-3'>
-          <img src={image3} className='img-3' />
+          <img src={image4} className='img-3' />
         </div>
 
         <div className='item-4'>
-          <img src={image4} className='img-4' />
+          <img src={image2} className='img-4' />
         </div>
 
         <div className='item-5'>
-          <h2>{Object.keys(categories).filter((category) => categories[category]).join(', ').toLocaleUpperCase()}</h2>
+          <div id='circulo-negro' />
           <p>{project} </p>
         </div>
 

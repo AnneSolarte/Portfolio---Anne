@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import { collection, addDoc, getDocs, getFirestore, updateDoc, doc } from 'firebase/firestore'
+import { collection, addDoc, getDocs, getFirestore, updateDoc, doc, query, orderBy } from 'firebase/firestore'
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import { firebaseConfig } from './firebaseConfig'
 
@@ -30,7 +30,10 @@ export const addProject = async (formData) => {
 }
 
 export const getProjects = async () => {
-  const querySnapshot = await getDocs(collection(db, 'projects'))
+  // Ordena por el ID del documento si refleja la antigüedad
+  const q = query(collection(db, 'projects'), orderBy('id', 'desc'))
+
+  const querySnapshot = await getDocs(q)
   const arrayProducts = []
 
   querySnapshot.forEach((doc) => {

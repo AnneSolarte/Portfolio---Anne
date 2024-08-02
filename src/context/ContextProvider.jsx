@@ -94,7 +94,8 @@ export const ContextProvider = ({ children }) => {
       logInUser,
       logOutUser,
       loading,
-      fetchProjects
+      fetchProjects,
+      setHiddenBar
     }}
     >
       {children}
