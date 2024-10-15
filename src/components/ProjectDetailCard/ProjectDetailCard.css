@@ -85,6 +85,8 @@
 }
 
 .item-5 {
+  display: flex;
+  position: relative;
   background-color: #D8EC0A;
   grid-row: 4 / 5;
   grid-column: 6 / 10;
@@ -106,14 +108,31 @@
 }
 
 #circulo-negro {
+  display: flex;
+  position: absolute;
   width: 2rem; 
   height: 2rem; 
   background-color: black;
   border-radius: 50%; 
   display: flex;
   z-index: 40;
-  right: 1%;
+  right: 1rem;
+  bottom: 1rem;
 }
+
+.title-figure{
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.text-figure{
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
 
 
 @media (min-width: 700px){
@@ -136,7 +155,7 @@
   }
 
   .data-project-detail{
-    width: 44%;
+    width: 43rem;
     display:flex;
     flex-direction: column;
     z-index: 6;
@@ -174,8 +193,27 @@
 
   .item-5{
     margin: 0;
-  padding: 0;
-  flex-direction: column;
+    padding: 0;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .text-fig{
+    width: 85%;
+  }
+
+  .title-figure{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  .text-figure{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
   }
 
   .container div {
@@ -186,7 +224,7 @@
     background-color: black;
     grid-row: 1 / 8;
     grid-column: 1 / 8;
-    opacity: 0.8;
+    opacity: 0.85;
     z-index: 5;
   }
 
@@ -215,21 +253,11 @@
 
   .item-5 {
     display: flex;
-    background-color: #D8EC0A;
+    background-color: #ffffff;
     grid-row: 10 / 13;
     grid-column: 8 / 11;
     color: black;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-
-  .item-5 p {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    font-size: 1.2rem
+    
     
   }
 

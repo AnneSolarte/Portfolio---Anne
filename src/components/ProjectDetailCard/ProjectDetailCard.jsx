@@ -11,6 +11,23 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
   const HandleGoBackPage = () => {
     navigate('/projects')
   }
+  const getCategoryText = () => {
+    const { uxdesign, uidesign, frontend } = categories
+    const categoryList = []
+
+    if (uxdesign) categoryList.push('UX')
+    if (uidesign) categoryList.push('UI')
+    if (frontend) categoryList.push('FRONT')
+
+    if (categoryList.length === 0) return ''
+    if (categoryList.length === 1 && categoryList[0] === 'FRONT') return 'FRONT'
+
+    if (categoryList.includes('FRONT')) {
+      return categoryList.join(' / ')
+    }
+
+    return categoryList.join(' / ') + ' DESIGN'
+  }
 
   return (
     <div className='project-detail-card-div'>
@@ -57,8 +74,13 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
         </div>
 
         <div className='item-5'>
+
+          <div className='text-fig'>
+            <p className='title-figure'>{getCategoryText()}</p>
+            <p className='text-figure'>  {project} </p>
+          </div>
           <div id='circulo-negro' />
-          <p>{project} </p>
+
         </div>
 
       </div>
