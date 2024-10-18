@@ -35,6 +35,10 @@
     margin: 0;  
 }
 
+.education-item{
+    margin-bottom: 1rem;
+}
+
 .services-list{
     margin-bottom: 0.5rem;
     margin-top: 0rem;
@@ -44,12 +48,10 @@
     justify-content: flex-start;
     width: auto;
 }
-.education-item{
-    margin-bottom: 1rem;
-}
+
 
 .services-item{
-    border: 3px solid #171717;
+    border: 3px solid #ffffff;
     max-width: 6rem;
     flex: 0 0 auto;
     border-radius: 0.2em;
@@ -70,8 +72,8 @@
 
 @media (min-width: 700px){
     .education-services-card{
-        width: auto;
-        height: 34rem;
+        width: 30rem;
+        height: fit-content;
         background-color: #D9D9D9;
         color: #171717;
         border-radius: 0.5em;
@@ -83,6 +85,7 @@
     .services-list{
         display: flex;
         width: auto;
+        justify-content: center
     }
 
     .services-item{

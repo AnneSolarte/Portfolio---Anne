@@ -60,32 +60,60 @@ export const services = [
   'Brand Identity Design'
 ]
 
+export const experience = [
+  {
+    id: '1',
+    major: 'Web developer',
+    date: '2024 - Present',
+    place: 'ficacia, Remote'
+  },
+  {
+    id: '2',
+    major: 'UX / UI Designer',
+    date: '2024 - Present',
+    place: 'Bancoldex, Remote'
+  },
+  {
+    id: '3',
+    major: 'UI Designer',
+    date: '2024',
+    place: 'Alianza, Remote'
+  },
+  {
+    id: '4',
+    major: 'Web Programming Monitor',
+    date: '2024 - Present',
+    place: 'Icesi University, Cali - Colombia'
+  },
+  {
+    id: '5',
+    major: 'Designing with algorithms Monitor',
+    date: '2024 - Present',
+    place: 'Icesi University, Cali - Colombia'
+  },
+  {
+    id: '6',
+    major: 'Leader UI design- Integrating project 1',
+    date: '2023',
+    place: 'Icesi University, Cali - Colombia'
+  }
+
+]
+
 export const education = [
   {
     id: '1',
     major: 'Interactive Media Design',
     date: '2021 - Present',
-    place: 'Icesi University, Cali Colombia'
-
+    place: 'Icesi University, Cali - Colombia'
   },
   {
     id: '2',
-    major: 'Leader UI design- Integrating project 1',
-    date: '2023',
-    place: 'Icesi University, Cali Colombia'
-  },
-  {
-    id: '3',
-    major: 'Designing with algorithms Monitor',
-    date: '2024',
-    place: 'Icesi University, Cali Colombia'
-  },
-  {
-    id: '4',
-    major: 'Web Programming Monitor',
-    date: '2024',
-    place: 'Icesi University, Cali Colombia'
+    major: 'High-school',
+    date: '2021',
+    place: 'I.E. San Agustín, Popayán - Colombia'
   }
+
 ]
 
 export const softwareSkills = {

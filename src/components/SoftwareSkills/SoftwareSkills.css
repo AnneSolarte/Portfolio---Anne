@@ -1,20 +1,21 @@
 .softaware-skills-div{
     position: relative;
+    display: flex;
     height: 19rem;
     color: #D9D9D9;
     background-color: #171717;
     border-radius: 0.1em;
-    margin-top: 2rem;
     box-shadow: rgba(0, 0, 0, 0.645) 0px 3px 8px;
+    margin-top: 3rem;
     padding-left:2rem;
     padding-top: 3rem;
     z-index: 1;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .softaware-skills-div hr{
     width: 100%;
-    margin-left: -1rem;
+    margin-left: 1rem;
     border: none; /* Elimina el borde predeterminado */
     background-color:#D9D9D9; /* Cambia el color de fondo a tu preferencia */
     height: 1px; /* Establece la altura de la línea */
@@ -60,10 +61,10 @@
     .softaware-skills-div{
         display: flex;
         flex-direction: row;
-        position: absolute;
         width: 28rem;
         height: 8rem;
-        left: 48%;
+        margin-top: 2rems ;
+        margin-left: -10rem;
         padding: 2rem;
     }
 
@@ -106,7 +107,7 @@
         background-color: #D9D9D9; /* Cambia el color de fondo a tu preferencia */
         transform: rotate(180deg); /* Rota la línea para que sea vertical */
         margin-bottom: 1rem;
-        margin-top: -10.6rem;
+        margin-top: -10rem;
         margin-left: 14rem;
     }
     

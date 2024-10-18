@@ -2,6 +2,7 @@ import { EducationServicesCard } from '../../components/EducationServicesCard/Ed
 import { IdentificationCard } from '../../components/IdentificationCard/IdentificationCard'
 import { PersonalSkills } from '../../components/PersonalSkills/PersonalSkills'
 import { SoftwareSkills } from '../../components/SoftwareSkills/SoftwareSkills'
+import { services } from '../../data/about'
 import './About.css'
 
 export const About = () => {
@@ -21,6 +22,18 @@ export const About = () => {
             <EducationServicesCard />
           </div>
           <SoftwareSkills />
+          <div className='services-div'>
+            <h2>SERVICES</h2>
+            <hr />
+            <div className='services-list'>
+              {services.map((item, index) => (
+                <div key={index} className='services-item'>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </div>
 
