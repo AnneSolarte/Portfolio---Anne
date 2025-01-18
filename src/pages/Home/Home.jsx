@@ -23,7 +23,7 @@ export const Home = () => {
       <div className='text-home-div'>
         <h1>Hi,</h1>
         <h1>I’m Anne </h1>
-        <p>A Ux and UI Designer and front ed developer from Cali, Colombia</p>
+        <p>A UX/UI Designer and Frontend Developer from Cali, Colombia</p>
       </div>
 
       <img
