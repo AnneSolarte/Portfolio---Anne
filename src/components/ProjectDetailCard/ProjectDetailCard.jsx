@@ -1,11 +1,13 @@
 import React from 'react'
 import backIcon from '../../assets/back-icon.png'
 import behanceIcon from '../../assets/behance-icon.png'
+import siteIcon from '../../assets/site-icon.png'
+import gitIcon from '../../assets/git-icon.png'
 import PropTypes from 'prop-types'
 import './ProjectDetailCard.css'
 import { useNavigate } from 'react-router-dom'
 
-export const ProjectDetailCard = ({ title, description, behanceLink, image1, image2, image3, image4, OnClick, project, categories }) => {
+export const ProjectDetailCard = ({ title, description, behanceLink, siteLink, gitLink, image1, image2, image3, image4, OnClick, project, categories }) => {
   const navigate = useNavigate()
 
   const HandleGoBackPage = () => {
@@ -29,24 +31,63 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
     return categoryList.join(' / ') + ' DESIGN'
   }
 
+  const category = getCategoryText()
+  console.log('category', category)
+
   return (
     <div className='project-detail-card-div'>
 
       <div className='data-project-detail'>
+
         <div className='icons'>
           <img
             src={backIcon}
             onClick={HandleGoBackPage}
             className='back-icon'
           />
-          <a
-            href={behanceLink}
-          >
-            <img
-              src={behanceIcon}
-              className='behance-icon'
-            />
-          </a>
+
+          <div className='links'>
+            {
+            behanceLink
+              ? <a
+                  href={behanceLink}
+                >
+                <img
+                  src={behanceIcon}
+                  className='behance-icon'
+                />
+
+              </a>
+              : null
+            }
+
+            {
+            siteLink
+              ? <a
+                  href={siteLink}
+                >
+                <img
+                  src={siteIcon}
+                  className='behance-icon'
+                />
+                </a>
+              : null
+            }
+
+            {
+            gitLink
+              ? <a
+                  href={gitLink}
+                >
+                <img
+                  src={gitIcon}
+                  className='behance-icon'
+                />
+                </a>
+              : null
+            }
+          </div>
+
         </div>
 
         <h1>{title} </h1>
@@ -59,6 +100,7 @@ export const ProjectDetailCard = ({ title, description, behanceLink, image1, ima
 
         <div className='item-1'>
           <img src={image1} className='img-1' />
+
         </div>
 
         <div className='item-2'>
@@ -94,6 +136,8 @@ ProjectDetailCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   behanceLink: PropTypes.string,
+  siteLink: PropTypes.string,
+  gitLink: PropTypes.string,
   image1: PropTypes.string,
   image2: PropTypes.string,
   image3: PropTypes.string,

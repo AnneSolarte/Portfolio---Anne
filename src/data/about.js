@@ -64,31 +64,31 @@ export const experience = [
   {
     id: '1',
     major: 'Web developer',
-    date: '2024 - Present',
-    place: 'ficacia, Remote'
+    date: '2024 - 2024',
+    place: 'Eficacia, Remote'
   },
   {
     id: '2',
     major: 'UX / UI Designer',
-    date: '2024 - Present',
+    date: '2024 - 2024',
     place: 'Bancoldex, Remote'
   },
   {
     id: '3',
     major: 'UI Designer',
-    date: '2024',
+    date: '2024 - 2024',
     place: 'Alianza, Remote'
   },
   {
     id: '4',
     major: 'Web Programming Monitor',
-    date: '2024 - Present',
+    date: '2024 - 2024',
     place: 'Icesi University, Cali - Colombia'
   },
   {
     id: '5',
     major: 'Designing with algorithms Monitor',
-    date: '2024 - Present',
+    date: '2024 - 2024',
     place: 'Icesi University, Cali - Colombia'
   },
   {

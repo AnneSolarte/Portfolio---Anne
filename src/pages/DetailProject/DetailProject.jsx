@@ -24,6 +24,8 @@ export const DetailProject = () => {
             title={projectData.title}
             description={projectData.description}
             behanceLink={projectData.behanceLink}
+            siteLink={projectData.siteLink}
+            gitLink={projectData.gitLink}
             image1={projectData.images[0]}
             image2={projectData.images[1]}
             image3={projectData.images[2]}
