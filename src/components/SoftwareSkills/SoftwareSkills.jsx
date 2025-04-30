@@ -13,7 +13,7 @@ export const SoftwareSkills = () => {
         <div className='white-line' />
 
         <h3>Design Software</h3>
-        <div className='software-list'>
+        <div className='design-list'>
           {DesignSoftwareData.icons.map((item, index) => (
             <div
               key={index}
@@ -26,8 +26,6 @@ export const SoftwareSkills = () => {
             </div>
           ))}
         </div>
-
-        <hr />
       </div>
 
       <div>

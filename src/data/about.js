@@ -7,7 +7,10 @@ import prIcon from '../assets/pr-icon.png'
 import figmaIcon from '../assets/figma-icon.png'
 import jsIcon from '../assets/js-icon.png'
 import tsIcon from '../assets/ts-icon.png'
-import reactIcon from '../assets/react-icom.png'
+import reactIcon from '../assets/react-icon.png'
+import angularIcon from '../assets/angular-icon.png'
+import reduxIcon from '../assets/redux-icon.png'
+import tailwindIcon from '../assets/tailwind-icon.png'
 
 export const dataIdentification = [
   {
@@ -61,6 +64,12 @@ export const services = [
 ]
 
 export const experience = [
+  {
+    id: '0',
+    major: 'Web developer',
+    date: '2025 - Present',
+    place: 'Eficacia, Remote'
+  },
   {
     id: '1',
     major: 'Web developer',
@@ -123,6 +132,6 @@ export const softwareSkills = {
   },
   DeveloperSoftware: {
     name: 'Developer Software',
-    icons: [jsIcon, tsIcon, reactIcon]
+    icons: [jsIcon, tsIcon, reactIcon, angularIcon, reduxIcon, tailwindIcon]
   }
 }

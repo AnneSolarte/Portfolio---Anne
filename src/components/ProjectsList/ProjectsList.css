@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     margin-top: 2rem;
+    justify-content: start;
 }
 
 .project-image-div{
@@ -17,8 +18,15 @@
 
 .pagination-buttons{
     display: flex;
+    width: 8rem;
     z-index: 3;
-    margin-left: 10rem;
+    margin: auto auto;
+    gap: 0.5rem;
+    margin: 0
+}
+
+.prev-button, .next-button{
+    height: fit-content
 }
 
 .pagination-buttons button{
@@ -32,15 +40,11 @@
     width: 2rem;
 }
 
-.prev-button{
-    margin-right: 1rem;
-}
-
 @media (min-width: 700px){
     .project-image-div{
         display: flex;
-        width: 28.5rem;
-        height: 14.1rem;
+        width: 46%;
+        height: 15rem;
         border-radius: 0.6rem;
     }
 
@@ -63,12 +67,12 @@
     }
 
     .pagination-buttons{
-        display: flex;
-        position: absolute;
-        top: 45rem;
-        left: 37%;
-       
+        position: relative;
+        bottom: 2%
     }
+    
+
+
 
     
 .pagination-buttons button{
