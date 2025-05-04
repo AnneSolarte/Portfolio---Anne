@@ -20,14 +20,7 @@ export const ProjectsList = () => {
   }, [selectedFiltered])
 
   const navigateToProjectDetail = (id) => {
-    console.log('Projects:', projects)
-    console.log('ID to find:', id)
-
-    const projectData = projects.find((project) => {
-      console.log('Comparing:', project.id, 'with', id)
-      return project.id === id
-    })
-
+    const projectData = projects.find((project) => project.id === id)
     if (projectData) {
       navigate(`/projects/${projectData.name}`)
     } else {
@@ -44,13 +37,15 @@ export const ProjectsList = () => {
   }
 
   return (
-    <>
-      <div className='projects-list-div'>
+    <div className='projects-container'>
+      <div className='projects-list-wrapper'>
         {loading
-          ? <Loader />
+          ? (
+            <Loader />
+            )
           : filteredProjects.length !== 0
             ? (
-              <>
+              <div className='projects-grid'>
                 {currentProjects.map((project) => (
                   <div key={project.id} className='project-image-div'>
                     <img
@@ -60,29 +55,27 @@ export const ProjectsList = () => {
                     />
                   </div>
                 ))}
-                <div className='pagination-buttons'>
-                  {currentPage > 1 && (
-                    <button
-                      className='prev-button'
-                      onClick={prevPage}
-                    >{'<'}
-                    </button>
-                  )}
-                  {filteredProjects.length > indexOfLastProject && (
-                    <button
-                      className='next-button'
-                      onClick={nextPage}
-                    >{'>'}
-                    </button>
-                  )}
-                </div>
-              </>
+              </div>
               )
             : (
               <p>No hay proyectos para mostrar.</p>
               )}
       </div>
-    </>
 
+      {filteredProjects.length > 0 && (
+        <div className='pagination-buttons'>
+          {currentPage > 1 && (
+            <button className='prev-button' onClick={prevPage}>
+              {'<'}
+            </button>
+          )}
+          {filteredProjects.length > indexOfLastProject && (
+            <button className='next-button' onClick={nextPage}>
+              {'>'}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
   )
 }

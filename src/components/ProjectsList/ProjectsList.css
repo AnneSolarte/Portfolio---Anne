@@ -1,36 +1,42 @@
-.projects-list-div{
-    display: flex;
-    flex-direction: column;
+.projects-container {
+    position: relative;
+    min-height: 50vh; 
     width: 100%;
-    margin-top: 2rem;
-    justify-content: start;
-}
-
-.project-image-div{
+    margin-top: 2%
+  }
+  
+  .projects-list-wrapper {
+    width: 100%;
+  }
+  
+  .projects-grid {
     display: flex;
-    margin-bottom: 1.5rem;
-    
-}
-.project-image-div img{
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .project-image-div {
+    flex: 0 0 100%;
+  }
+  
+  .project-image-div img {
     width: 100%;
     border-radius: 1rem;
-}
-
-.pagination-buttons{
-    display: flex;
-    width: 8rem;
-    z-index: 3;
-    margin: auto auto;
-    gap: 0.5rem;
-    margin: 0
-}
-
-.prev-button, .next-button{
-    height: fit-content
-}
-
-.pagination-buttons button{
-    background-color: #E2FF0F ;
+    cursor: pointer;
+  }
+  
+    .pagination-buttons {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+  
+  .pagination-buttons button {
+    background-color: #E2FF0F;
     border: none;
     color: black;
     font-weight: 600;
@@ -38,49 +44,32 @@
     padding: 0.2rem;
     border-radius: 50rem;
     width: 2rem;
-}
-
-@media (min-width: 700px){
-    .project-image-div{
-        display: flex;
-        width: 46%;
-        height: 15rem;
-        border-radius: 0.6rem;
-    }
-
-    .project-image-div img{
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
-    }
-
-    .projects-list-div{
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 2rem;
-
-    }
-    .project-image-div{
-        flex: 0 0 auto;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .pagination-buttons{
-        position: relative;
-        bottom: 2%
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 700px) {
+    .project-image-div {
+      flex: 0 0 calc(50% - 0.5rem);
+      height: 15rem;
     }
     
+    .project-image-div img {
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .pagination-buttons button {
+      font-size: 1.6rem;
+      width: 2.8rem;
+      height: 2.8rem;
+    }
 
-
-
-    
-.pagination-buttons button{
-
-    font-weight: 600;
-    font-size: 1.6rem;
-    padding: 0.5rem;
-    width: 2.8rem;
-}
-    
+    .pagination-buttons {
+        left: 1rem;
+        bottom: -5rem;
+      }
   }

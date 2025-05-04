@@ -94,6 +94,7 @@ export const ProjectDetailCard = ({ title, description, behanceLink, siteLink, g
         <p>{description} </p>
 
       </div>
+
       <div className='container'>
 
         <div className='item-0' />
