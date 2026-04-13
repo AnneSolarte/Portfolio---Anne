@@ -39,22 +39,32 @@ export const loginFormData = [
 export const addProjectFormData = [
   {
     name: 'title',
-    placeholder: 'Project Title',
+    placeholder: 'Título del proyecto',
     type: 'text'
   },
   {
     name: 'description',
-    placeholder: 'Project Description',
-    type: 'text'
+    placeholder: 'Descripción',
+    type: 'textarea'
   },
   {
     name: 'project',
-    placeholder: 'Project Type',
+    placeholder: 'Tipo / rol del proyecto (ej. Web-based MVP)',
     type: 'text'
   },
   {
     name: 'behanceLink',
-    placeholder: 'Behance Link',
+    placeholder: 'Behance (opcional)',
+    type: 'text'
+  },
+  {
+    name: 'siteLink',
+    placeholder: 'Sitio o demo (opcional)',
+    type: 'text'
+  },
+  {
+    name: 'gitLink',
+    placeholder: 'GitHub (opcional)',
     type: 'text'
   },
   {

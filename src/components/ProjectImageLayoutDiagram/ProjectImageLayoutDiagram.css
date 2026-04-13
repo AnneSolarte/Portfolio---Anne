@@ -1,0 +1,177 @@
+.project-image-layout-diagram {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.project-image-layout-diagram--bounded {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+.project-image-layout-diagram__grid {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 10 / 12;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 0.3rem;
+  background: #b0b0b0;
+  padding: 0.3rem;
+  border-radius: 0.45rem;
+  box-sizing: border-box;
+}
+
+.project-image-layout-diagram--bounded .project-image-layout-diagram__grid {
+  width: auto;
+  height: auto;
+  aspect-ratio: unset;
+  flex-shrink: 0;
+}
+
+.project-image-layout-diagram__slot {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  border-radius: 0.3rem;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 2px solid #222;
+  background: linear-gradient(145deg, #e4e4e4 0%, #c8c8c8 100%);
+}
+
+.project-image-layout-diagram__slot--accent {
+  border-color: #111;
+  background: linear-gradient(145deg, #eef44a 0%, #c9d509 100%);
+}
+
+.project-image-layout-diagram__slot--bordered {
+  border: 3px solid #fff;
+  outline: 1px solid #222;
+  outline-offset: -1px;
+}
+
+.project-image-layout-diagram__file {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.project-image-layout-diagram__label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.2rem 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.project-image-layout-diagram__label:hover {
+  filter: brightness(1.05);
+}
+
+.project-image-layout-diagram__num {
+  font-weight: 800;
+  font-size: clamp(0.95rem, 3.5vw, 1.35rem);
+  color: #111;
+  line-height: 1;
+}
+
+.project-image-layout-diagram__filename {
+  font-size: clamp(0.45rem, 1.6vw, 0.65rem);
+  font-weight: 600;
+  color: #222;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.project-image-layout-diagram__slot--info {
+  font-size: clamp(0.45rem, 1.5vw, 0.62rem);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.15;
+  padding: 0.2rem;
+  background: #fff;
+  border: 2px dashed #555;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop: ProjectDetailCard (min-width: 700px) */
+.project-image-layout-diagram__slot--1 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 8;
+}
+
+.project-image-layout-diagram__slot--2 {
+  grid-row: 1 / 10;
+  grid-column: 8 / 11;
+}
+
+.project-image-layout-diagram__slot--3 {
+  grid-row: 8 / 13;
+  grid-column: 1 / 4;
+}
+
+.project-image-layout-diagram__slot--4 {
+  grid-row: 8 / 13;
+  grid-column: 4 / 8;
+}
+
+.project-image-layout-diagram__slot--info {
+  grid-row: 10 / 13;
+  grid-column: 8 / 11;
+}
+
+@media (max-width: 699px) {
+  .project-image-layout-diagram__grid {
+    aspect-ratio: 9 / 7;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+
+  .project-image-layout-diagram__slot--1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 10;
+  }
+
+  .project-image-layout-diagram__slot--2 {
+    grid-row: 4 / 7;
+    grid-column: 1 / 6;
+  }
+
+  .project-image-layout-diagram__slot--3 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+  }
+
+  .project-image-layout-diagram__slot--4 {
+    grid-row: 3 / 4;
+    grid-column: 5 / 10;
+  }
+
+  .project-image-layout-diagram__slot--info {
+    grid-row: 4 / 5;
+    grid-column: 6 / 10;
+  }
+}

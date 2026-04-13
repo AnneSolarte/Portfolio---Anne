@@ -39,15 +39,16 @@ export const ContextProvider = ({ children }) => {
     fetchProjects()
   }, [])
 
-  const fetchProjects = async () => {
+  const fetchProjects = async (options = {}) => {
+    const { forceRefresh = false } = options
     try {
-      const savedProjects = await getProjects()
+      const savedProjects = await getProjects({ forceRefresh })
       const initialProjects = savedProjects || []
       setProjects(initialProjects)
-      console.log('Projects tradídos en fetch')
       setLoading(false)
     } catch (error) {
       console.error('Error fetching projects:', error)
+      setLoading(false)
     }
   }
 

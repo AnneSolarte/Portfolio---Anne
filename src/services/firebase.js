@@ -3,6 +3,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { collection, addDoc, getDocs, getFirestore, updateDoc, doc, query, orderBy } from 'firebase/firestore'
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import { firebaseConfig } from './firebaseConfig'
+import { clearProjectsCache, readProjectsCache, writeProjectsCache } from './projectsCache'
 
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
@@ -20,27 +21,36 @@ export const logIn = async (dataUser) => {
 
 export const addProject = async (formData) => {
   console.log('Form in addproject', formData)
-  try {
-    const docRef = await addDoc(collection(db, 'projects'), formData)
-    console.log('Document written with ID: ', docRef.id)
-    await updateDoc(doc(db, 'projects', docRef.id), { id: docRef.id })
-  } catch (e) {
-    console.error('Error adding document: ', e)
-  }
+  const docRef = await addDoc(collection(db, 'projects'), formData)
+  console.log('Document written with ID: ', docRef.id)
+  await updateDoc(doc(db, 'projects', docRef.id), { id: docRef.id })
+  clearProjectsCache()
 }
 
-export const getProjects = async () => {
-  // Ordena por el ID del documento si refleja la antigüedad
-  const q = query(collection(db, 'projects'), orderBy('id', 'desc'))
+/**
+ * Lista proyectos desde caché (localStorage) si existe; si no, desde Firestore y guarda en caché.
+ * @param {{ forceRefresh?: boolean }} options - Si forceRefresh es true, ignora la caché.
+ */
+export const getProjects = async (options = {}) => {
+  const { forceRefresh = false } = options
 
+  if (!forceRefresh) {
+    const cached = readProjectsCache()
+    if (cached) {
+      return cached
+    }
+  }
+
+  const q = query(collection(db, 'projects'), orderBy('id', 'desc'))
   const querySnapshot = await getDocs(q)
   const arrayProducts = []
 
-  querySnapshot.forEach((doc) => {
-    const data = doc.data()
-    arrayProducts.push({ id: doc.id, ...data })
+  querySnapshot.forEach((docSnap) => {
+    const data = docSnap.data()
+    arrayProducts.push({ id: docSnap.id, ...data })
   })
 
+  writeProjectsCache(arrayProducts)
   return arrayProducts
 }
 
