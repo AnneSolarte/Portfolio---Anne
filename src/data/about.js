@@ -22,7 +22,7 @@ export const dataIdentification = [
   {
     id: '2',
     key: 'Age',
-    value: '20 y/o'
+    value: '21 y/o'
   },
   {
     id: '3',
@@ -66,9 +66,9 @@ export const services = [
 export const experience = [
   {
     id: '0',
-    major: 'Web developer',
+    major: 'Product Designer',
     date: '2025 - Present',
-    place: 'Eficacia, Remote'
+    place: 'Atix digital, Remote'
   },
   {
     id: '1',
@@ -113,7 +113,7 @@ export const education = [
   {
     id: '1',
     major: 'Interactive Media Design',
-    date: '2021 - Present',
+    date: '2021 - 2026',
     place: 'Icesi University, Cali - Colombia'
   },
   {

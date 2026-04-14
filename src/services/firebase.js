@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import { collection, addDoc, getDocs, getFirestore, updateDoc, doc, query, orderBy } from 'firebase/firestore'
+import { collection, addDoc, getDocs, getFirestore, updateDoc, doc, serverTimestamp, query, orderBy } from 'firebase/firestore'
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import { firebaseConfig } from './firebaseConfig'
 import { clearProjectsCache, readProjectsCache, writeProjectsCache } from './projectsCache'
@@ -21,7 +21,10 @@ export const logIn = async (dataUser) => {
 
 export const addProject = async (formData) => {
   console.log('Form in addproject', formData)
-  const docRef = await addDoc(collection(db, 'projects'), formData)
+  const docRef = await addDoc(collection(db, 'projects'), {
+    ...formData,
+    createdAt: serverTimestamp()
+  })
   console.log('Document written with ID: ', docRef.id)
   await updateDoc(doc(db, 'projects', docRef.id), { id: docRef.id })
   clearProjectsCache()
@@ -41,8 +44,8 @@ export const getProjects = async (options = {}) => {
     }
   }
 
-  const q = query(collection(db, 'projects'), orderBy('id', 'desc'))
-  const querySnapshot = await getDocs(q)
+  const projectsQuery = query(collection(db, 'projects'), orderBy('createdAt', 'desc'))
+  const querySnapshot = await getDocs(projectsQuery)
   const arrayProducts = []
 
   querySnapshot.forEach((docSnap) => {

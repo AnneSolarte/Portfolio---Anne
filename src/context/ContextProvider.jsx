@@ -36,7 +36,7 @@ export const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     setLoading(true)
-    fetchProjects()
+    fetchProjects({ forceRefresh: true })
   }, [])
 
   const fetchProjects = async (options = {}) => {

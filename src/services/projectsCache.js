@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'portfolio_projects_cache_v1'
+const STORAGE_KEY = 'portfolio_projects_cache_v2'
 
 export const readProjectsCache = () => {
   try {
